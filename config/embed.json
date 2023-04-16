@@ -1,0 +1,13 @@
+{
+	"greet_embed":{
+		"title":"Hey there!",
+		"description":"How may we assist you today?",
+		"color": "#00FF00"
+	}, 
+	
+	"panel_embed":{
+		"title":"Panel",
+		"description":"This is a panel embed",
+		"color": "#00FF00"
+	}
+}

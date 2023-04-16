@@ -1,0 +1,5 @@
+RTickets
+core/__pycache__/
+cogs/__pycache__/
+views/__pycache__/
+.env

@@ -1,0 +1,11 @@
+{
+	"options": [
+		{
+			"label": "Support Ticket",
+			"description": "Ticket for general support queries.",
+			"custom_emoji": "🎫",
+			"category":696969696696969,
+			"role":["Role to be pinged.Add Role Ids here"]
+		}
+	]
+}
