@@ -31,15 +31,15 @@ Fill in all config files properly.
 once you fill config information and save it, then run:
 
 ```bash
-  python main.py
+  python runtime.py
 ```
 
 
 ## Roadmap
 
-- Add logging support
+- ~~Add logging support~~
 
-- Add autodelete tickets when inactive.
+- ~~Add autodelete tickets when inactive.~~
 
-- Improve config.json
+- ~~Improve config.json~~
 
