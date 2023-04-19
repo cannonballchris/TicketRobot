@@ -7,7 +7,10 @@ async def create_ticket(user, category, type):
 		user.guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True, read_message_history=True),
 		user: discord.PermissionOverwrite(read_messages=True, send_messages=True, read_message_history=True)
 	}
-	channel = await category.create_text_channel(name=f"{user.name}-{user.discriminator}", topic=str(user.id))
+	user_name = user.name
+	if len(user_name) > 26:
+		user_name = user_name[:26]
+	channel = await category.create_text_channel(name=f"ticket-{user_name}", topic=str(user.id))
 	await channel.edit(overwrites=overwrites)
 	data = await load_config("./config/panel.json")
 	for val in data["options"]:

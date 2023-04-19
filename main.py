@@ -1,11 +1,7 @@
 import os
-import asyncio
-from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 
-load_dotenv()
-TOKEN = os.getenv("TOKEN")
 # The error codes:
 # 01 : Failed to load cog
 class TicketBot(commands.Bot):
@@ -24,6 +20,3 @@ class TicketBot(commands.Bot):
 		print(f"Logged in as {self.user} ({self.user.id})")
 		#Set activity to watching support
 		await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="support"))
-
-if __name__ == "__main__":
-	asyncio.run(TicketBot().run(TOKEN))

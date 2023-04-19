@@ -1,5 +1,10 @@
 {
-	"staff_roles":[1087662246370488322],
+	"staff_roles":[1087662230293716992],
 	"claim":false, 
-	"allow-user-ticket-closing":false
+	"allow-user-ticket-closing":true,
+	"allow-reopening":true,
+	"transcript-logs":true,
+	"transcript-channel": 1097962421865426985,
+	"auto-close":true,
+	"auto-close-interval":2
 }
