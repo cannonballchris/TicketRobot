@@ -29,9 +29,12 @@ class AutoDelete(commands.Cog):
 						last_message = [message async for message in channel.history(limit = 1)]
 						#Get the time difference between the last message and now
 						time_difference = await core.get_time_difference(last_message[0].created_at)
+						#check if the author is ticket creator
+						if last_message[0].author.id == int(channel.description):
+							#If the time difference is greater than the time specified in the config file, delete the channel
+							if time_difference > config["auto-close-interval"]:
+								await channel.delete()
 						#If the time difference is greater than the time specified in the config file, delete the channel
-						if time_difference > config["auto-close-interval"]:
-							await channel.delete()
 
 async def setup(bot):
 	await bot.add_cog(AutoDelete(bot))
